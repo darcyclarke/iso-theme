@@ -1,0 +1,24 @@
+
+//- ------------------------------
+//- Archive
+//- ------------------------------
+
+section.main(role="main")
+
+  - if posts
+
+    header.header
+
+      h1.title!= page.title
+
+      p.description != page.description
+
+    - for post in posts
+
+      div.content!= post.content
+
+  - else
+
+    header.header
+
+      h1.title No posts found.

@@ -1,0 +1,7 @@
+wordpress/
+.DS_Store
+test/
+nodepid
+nodeout
+node/
+node_modules/

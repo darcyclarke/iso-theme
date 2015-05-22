@@ -1,0 +1,92 @@
+doctype
+//if lt IE 7
+  <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+//if IE 7
+  <html class="no-js lt-ie9 lt-ie8">
+//if IE 8
+  <html class="no-js lt-ie9">
+//[if gt IE 8]><!
+html.no-js
+  //<![endif]
+  head
+
+    meta(charset="utf-8")
+
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+
+    title!= site.title
+
+    meta(property="article:publisher", content="http://darcyclarke.me")
+
+    meta(property="og:site_name", content="")
+
+    meta(property="og:title", content="")
+
+    meta(property="og:description", content="")
+
+    meta(property="og:image", content="")
+
+    meta(property="og:url", content="")
+
+    meta(property="og:type", content="website")
+
+    meta(name="twitter:card", content="summary_large_image")
+
+    meta(name="twitter:image:src", content="")
+
+    meta(name="twitter:site", content="@darcy")
+
+    meta(name="twitter:url", content="")
+
+    meta(name="twitter:description", content="")
+
+    meta(name="twitter:title", content="")
+
+    meta(name="description", content=site.description)
+
+    meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui")
+
+    link(rel="stylesheet", href="/assets/styles/main.min.css", type="text/css")
+
+    link(rel="icon", type="image/jpeg", href="/assets/images/favicon-32.jpg")
+
+    link(rel="apple-touch-icon", type="image/jpeg", href="/assets/images/favicon-57.jpg")
+
+    link(rel="apple-touch-icon", type="image/jpeg", sizes="72x72", href="/assets/images/favicon-72.jpg")
+
+    link(rel="apple-touch-icon", type="image/jpeg", sizes="114x114", href="/assets/images/favicon-114.jpg")
+
+    //if IE
+      link(rel="shortcut icon", href="/assets/images/favicon.ico")
+
+    link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700|Merriweather:100,400,300,700,900|Lato:300,400,700", type="text/css")
+
+  body
+
+    div.wrapper
+
+      header.header(role="header")
+
+        nav.nav(role="nav")
+
+          ul
+
+          - for link in links
+
+            li: a(href=link.url)!= link.text
+
+      section.main(role="main")
+
+        div.panels
+
+          != content
+
+      footer.footer(role="footer")
+
+        p.copyright Copyright 2015
+
+        a.createdby(href="http://darcyclarke.me")
+
+          span.text Theme Created By:
+
+          span.name Darcy Clarke
